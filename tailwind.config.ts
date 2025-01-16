@@ -14,6 +14,10 @@ const config: Config = {
       lg: "1200px",
     },
     extend: {
+      backgroundImage: {
+        bannerImg: "url('/Frontpage.png')",
+        menuPageImg: "url('/Frame-Menu.png')",
+      },
       container: {
         center: true,
         padding: {
