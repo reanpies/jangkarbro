@@ -19,3 +19,10 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.footer-bg {  
+  background-image: url('/footer_image.png');  
+  background-size: cover; /* Ensures the image covers the entire section */  
+  background-position: center; /* Centers the image */  
+  background-repeat: no-repeat; /* Prevents the image from repeating */  
+}  
