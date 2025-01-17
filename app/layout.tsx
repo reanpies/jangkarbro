@@ -5,8 +5,8 @@ import "./globals.css";
 const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Light Saas Landing Page",
-  description: "Template created by Frontend Tribe",
+  title: "Restoran Jangkar",
+  description: "Best Rest & Run at Cipanas",
 };
 
 export default function RootLayout({
