@@ -9,8 +9,8 @@ export const Hero = () => {
           Rest & Run
         </p>
         <div className="flex justify-center gap-5 mt-6 ">
-          <button className="btn btn-secondary">Lihat Menu</button>
-          <button className="btn btn-primary">Reservasi</button>
+          <button className="text-white bg-[#003B72] px-5 py-3 rounded-md text-2xl" >Lihat Menu</button>
+          <button className="text-white bg-yellow-500 px-5 py-3 rounded-md text-2xl">Reservasi</button>
         </div>
       </div>
     </div>
