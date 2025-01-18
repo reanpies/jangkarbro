@@ -11,7 +11,7 @@ export const Header = () => {
           <Image src={Logo} alt="Logo Jangkar" height={40} width={40} />
           <MenuIcon className="h-5 w-5 md:hidden fill-current text-white" />
           <nav className="hidden md:flex gap-10 text-white items-center">
-            <a href="#">Home</a>
+            <a href="/">Home</a>
             <a href="/Menu">Menu</a>
             <a href="/About">About</a>
             <a href="/Contact">Contact</a> 

@@ -6,7 +6,7 @@ import { Footer } from "@/sections/Footer";
 
 export default function Home() {
   return <>
-  <Header/> 
+  <Header/>
   <Hero/>
   <Menu/>
   <About/>
