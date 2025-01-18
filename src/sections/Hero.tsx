@@ -1,3 +1,5 @@
+import Link from "next/link"; // Import Link from next/link
+
 export const Hero = () => {
   return <section className="pt-28 pb-20 bg-bannerImg bg-no-repeat bg-cover bg-bottom w-full h-screen flex items-center justify-center">
     <div className="container">
@@ -9,7 +11,9 @@ export const Hero = () => {
           Rest & Run
         </p>
         <div className="flex justify-center gap-5 mt-6 ">
-          <button className="text-white bg-[#003B72] px-5 py-3 rounded-md text-2xl" >Lihat Menu</button>
+          <Link href="/Menu">
+            <button className="text-white bg-[#003B72] px-5 py-3 rounded-md text-2xl" >Lihat Menu</button>
+          </Link> 
           <button className="text-white bg-yellow-500 px-5 py-3 rounded-md text-2xl">Reservasi</button>
         </div>
       </div>
