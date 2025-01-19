@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import { setLoading } from "@/redux/features/loadingSlice";
 import ProductRow from "@/components/admin-panel/productrow";
+import Popup from "@/components/admin-panel/Popup";
 
 export interface IProduct {
     _id: string;
@@ -13,6 +14,9 @@ export interface IProduct {
     price: number;
     order: number;
     imageUrl: string;
+    isActive: boolean;
+    createdAt: string;
+    updatedAt: string;
   }
 
 const Dashboard = () => {
@@ -61,6 +65,9 @@ const Dashboard = () => {
               </table>
             </div>
           </div>
+          {openPopup && (
+            <Popup setOpenPopup={setOpenPopup} setUpdateTable={setUpdateTable} />
+          )}
         </div>
       );
 }

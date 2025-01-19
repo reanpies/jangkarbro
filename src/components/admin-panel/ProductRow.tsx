@@ -17,9 +17,15 @@ const ProductRow = ({ srNo, setOpenPopup, setUpdateTable, product }: PropsType) 
     const dispatch = useAppDispatch();
   
     const onEdit = () => {
-      dispatch(setProduct(product));
-      setOpenPopup(true);
-    };
+        dispatch(setProduct({
+          _id: product._id,
+          title: product.title,
+          category: product.category,
+          price: product.price,
+          imageUrl: product.imageUrl
+        }));
+        setOpenPopup(true);
+      };
   
     const onDelete = () => {
       // ... implementation for onDelete
