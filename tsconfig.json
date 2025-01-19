@@ -11,7 +11,7 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node", // td bundler, di gw rusak jir??
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",

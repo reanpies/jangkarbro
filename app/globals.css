@@ -26,3 +26,6 @@ body {
   background-position: center; /* Centers the image */  
   background-repeat: no-repeat; /* Prevents the image from repeating */  
 }  
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
