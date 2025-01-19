@@ -90,7 +90,7 @@ export const Menu_Home = () => {
         </div>
         <div className="text-center mt-8">
           <Link href="/Menu">
-            <button className="text-white px-4 py-2 bg-blue-600 rounded hover:bg-blue-700 transition">
+            <button className="text-white px-4 py-2 transition">
               Lihat Menu Lainnya →
             </button>
           </Link>

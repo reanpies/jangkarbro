@@ -45,10 +45,10 @@ const ReservationModal: React.FC<ReservationModalProps> = ({ isOpen, onClose }) 
             <p className="text-white text-center">Meja untuk <strong>{people}</strong></p>    
             <p className="text-white text-center">Sabtu <strong>{date}</strong></p>    
             <p className="text-white text-center mt-5">Apakah yakin sudah benar?</p>    
-              <button className="bg-yellow-500 text-black py-3 px-4 rounded w-full my-5" onClick={handleConfirm}>    
+              <button className="bg-yellow-500 text-black py-3 px-4 rounded w-full my-5 font-bold" onClick={handleConfirm}>    
                 Iya, buatkan reservasi    
               </button>    
-              <button className="bg-gray-300 text-black py-3 px-4 rounded w-full" onClick={handleEdit}>    
+              <button className="bg-gray-300 text-black py-3 px-4 rounded w-full font-bold" onClick={handleEdit}>    
                 Belum, sesuaikan lagi    
               </button>    
           </>    
@@ -79,6 +79,10 @@ const ReservationModal: React.FC<ReservationModalProps> = ({ isOpen, onClose }) 
                   <option>4 Orang</option>    
                   <option>5 Orang</option>    
                   <option>6 Orang</option>   
+                  <option>7 Orang</option>  
+                  <option>8 Orang</option>    
+                  <option>9 Orang</option>    
+                  <option>10 Orang</option>   
                 </select>    
               </div>    
               <div className="mb-4">    
@@ -91,7 +95,7 @@ const ReservationModal: React.FC<ReservationModalProps> = ({ isOpen, onClose }) 
                   required    
                 />    
               </div>    
-              <button type="submit" className="bg-yellow-500 text-black py-2 px-4 rounded w-full">    
+              <button type="submit" className="bg-yellow-500 text-black py-2 px-4 rounded w-full font-bold">    
                 Selesai Reservasi    
               </button>    
             </form>    
