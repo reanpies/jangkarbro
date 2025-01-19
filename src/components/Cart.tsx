@@ -1,5 +1,5 @@
 import React from 'react';  
-import { useCart } from '@/context/cartcontext';  
+import { useCart } from '@/context/CartContext';  
 
 export const Cart: React.FC<{ onClose: () => void }> = ({ onClose }) => {  
   const { cartItems, getTotal } = useCart();  
