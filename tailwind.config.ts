@@ -25,6 +25,12 @@ const config: Config = {
           lg: "80px",
         },
       },
+      colors: {
+        accent: "#0989FF",
+        topHeadingPrimary: "#010F1C",
+        topHeadingSecondary: "#021D35",
+        pink: "#FD4B6B",
+      }
     },
   },
   plugins: [],

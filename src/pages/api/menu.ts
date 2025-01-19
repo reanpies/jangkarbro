@@ -11,7 +11,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const menuItems = await db
         .collection('MenuItem')
         .find()
-        .sort({ order: 1 })
         .toArray();
 
       // Return the data as JSON

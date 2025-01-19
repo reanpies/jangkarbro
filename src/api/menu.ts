@@ -1,4 +1,3 @@
-// src/app/api/menu/menu.ts
 import { MenuItem } from '@/types/menu';
 
 export async function getMenuData(): Promise<MenuItem[]> {
