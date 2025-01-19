@@ -28,8 +28,10 @@ export const Header = () => {
               <a href="/Menu">Menu</a>  
               <a href="/About">About</a>  
               <a href="/Contact">Contact</a>   
+            </nav>        
+            <nav className="hidden md:flex gap-10 text-white items-center">   
               <button className="text-yellow-500 font-bold" onClick={handleOpenModal}>Reservasi</button>  
-            </nav>              
+            </nav>            
           </div>  
         </div>  
       </div>  
