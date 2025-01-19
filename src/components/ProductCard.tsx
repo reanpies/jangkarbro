@@ -2,7 +2,7 @@
 import { FaShoppingCart, FaRegBookmark, FaStar, FaFireAlt } from 'react-icons/fa';  
   
 interface ProductProps {  
-  id: number;  
+  id: string;  
   image: string;  
   name: string;  
   price: string;  
