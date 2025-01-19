@@ -1,11 +1,14 @@
-import { Header } from "@/sections/Header";
-import { Menu_Home } from "@/sections/Menu_Home";
-import { Footer } from "@/sections/Footer";
-
-export default function Home() {
-  return <>
-  <Header/> 
-  <Menu_Home/>
-  <Footer/>
-  </>;
-}
+import { Header } from "@/sections/Header";  
+import { Menu_Page } from "@/sections/Menu_Page";  
+import { Footer } from "@/sections/Footer";  
+import { CartProvider } from '@/context/cartcontext'; // Adjust the import path as necessary  
+  
+export default function Home() {  
+  return (  
+    <CartProvider>  
+      <Header />  
+      <Menu_Page />  
+      <Footer />  
+    </CartProvider>  
+  );  
+}  

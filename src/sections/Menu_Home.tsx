@@ -72,7 +72,6 @@ export const Menu_Home = () => {
     <section className="min-h-screen pt-28 pb-20 bg-menuPageImg bg-no-repeat bg-cover bg-bottom">
       <div className="container mx-auto px-4">
         <p className="text-yellow-500 text-3xl mb-4 text-center">Menu Favorit</p>
-        <h2 className="text-2xl font-bold text-white mb-6 text-center">{currentCategory}</h2>
         <div className="max-w-6xl mx-auto">
           <Slider {...settings}>
             {menu.map((product) => (
