@@ -51,13 +51,13 @@ export const Menu_Page = () => {
   return (
     <div className="min-h-screen bg-[#092C4C]">
       <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold text-white mb-8">Menu Favorit</h1>
+        <h1 className="text-3xl font-bold text-yellow-500 mb-8">Menu Favorit</h1>
 
         {/* Categories and Products */}
         <div className="space-y-8">
           {Object.entries(groupedMenu).map(([category, products]) => (
             <div key={category} className="space-y-4">
-              <h2 className="text-2xl font-semibold text-white border-b border-white/20 pb-2">
+              <h2 className="text-2xl font-semibold text-yellow-500 border-b border-white/20 pb-2">
                 {category}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -68,7 +68,7 @@ export const Menu_Page = () => {
                     image={product.imageUrl || '/default-menu-image.jpg'}  
                     name={product.title}  
                     price={`Rp. ${product.price.toLocaleString()}`}  
-                    maxQuantity={10}  
+                    maxQuantity={20}  
                   /> 
                   </div>
                 ))}
@@ -80,7 +80,7 @@ export const Menu_Page = () => {
         {/* Cart Button */}
         <button
           onClick={() => setIsCartOpen(true)}
-          className="fixed bottom-4 right-4 text-white px-6 py-3 bg-blue-600 rounded-full hover:bg-blue-700 transition shadow-lg"
+          className="fixed bottom-4 right-4 text-white px-8 py-3 bg-yellow-500 rounded-md hover:bg-blue-700 transition shadow-lg"
         >
           Keranjang ({cartItems.length})
         </button>

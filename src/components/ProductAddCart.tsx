@@ -111,7 +111,7 @@ export const ProductAddCart: React.FC<ProductAddCartProps> = ({
         <button   
           onClick={handleAddToCart}  
           disabled={quantity === 0}  
-          className="w-full py-2 px-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"  
+          className="w-full py-2 px-4 bg-yellow-500 text-white font-semibold rounded-lg hover:bg-blue-400 transition-colors disabled:opacity-80 disabled:cursor-not-allowed"  
         >  
           Add to Cart  
         </button>  
