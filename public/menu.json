@@ -1,0 +1,42 @@
+[  
+  {  
+    "_id": "1",  
+    "imageUrl": "/nasi_tim.jpg",  
+    "title": "",  
+    "price": 10000,  
+    "category": "Category 1",  
+    "order": 1  
+  },  
+  {  
+    "_id": "2",  
+    "imageUrl": "/default-menu-image.jpg",  
+    "title": "Product 2",  
+    "price": 20000,  
+    "category": "Category 1",  
+    "order": 2  
+  },  
+  {  
+    "_id": "3",  
+    "imageUrl": "/default-menu-image.jpg",  
+    "title": "Product 3",  
+    "price": 30000,  
+    "category": "Category 2",  
+    "order": 1  
+  },  
+  {  
+    "_id": "4",  
+    "imageUrl": "/default-menu-image.jpg",  
+    "title": "Product 4",  
+    "price": 40000,  
+    "category": "Category 2",  
+    "order": 2  
+  },  
+  {  
+    "_id": "5",  
+    "imageUrl": "/default-menu-image.jpg",  
+    "title": "Product 5",  
+    "price": 50000,  
+    "category": "Category 3",  
+    "order": 1  
+  }  
+]  
