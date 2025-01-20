@@ -4,7 +4,7 @@ import { useAppDispatch } from "@/redux/hooks";
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import { setLoading } from "@/redux/features/loadingSlice";
-import ProductRow from "@/components/admin-panel/productrow";
+import ProductRow from "@/components/admin-panel/ProductRow";
 import Popup from "@/components/admin-panel/Popup";
 
 export interface IProduct {

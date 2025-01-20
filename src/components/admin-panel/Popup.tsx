@@ -15,27 +15,31 @@ const Popup = ({ setOpenPopup, setUpdateTable }: PropsType) => {
   const dispatch = useAppDispatch();
 
   const [inputData, setInputData] = useState({
-    title: productData.title,
-    category: productData.category,
-    price: productData.price,
-    imageUrl: productData.imageUrl
+    title: productData?.title || "",
+    category: productData?.category || "",
+    price: productData?.price || "",
+    imageUrl: productData?.imageUrl || ""
   });
 
-  const handleSubmit = (e: FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     dispatch(setLoading(true));
+    setIsSubmitting(true);
 
-    axios
-    .put(`/api/edit_product/${productData._id}`, inputData)
-    .then((res) => {
-        makeToast("Product Updated Successfully!");
-        setUpdateTable((prevState) => !prevState);
-    })
-    .catch((err) => console.log(err))
-    .finally(() => {
-        dispatch(setLoading(false));
-        setOpenPopup(false);
-    });
+    try {
+      await axios.put(`/api/edit_product/${productData._id}`, inputData);
+      makeToast("Product Updated Successfully!");
+      setUpdateTable((prevState) => !prevState);
+      setOpenPopup(false);
+    } catch (err) {
+      console.error(err);
+      makeToast("Failed to update the product. Please try again.");
+    } finally {
+      dispatch(setLoading(false));
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -90,9 +94,15 @@ const Popup = ({ setOpenPopup, setUpdateTable }: PropsType) => {
             required
         />
         <div className="flex justify-end">
-            <button className="bg-accent block text-white px-8 py-2 rounded-lg self-center">
-                Save
-            </button>
+          <button
+              type="submit"
+              className={`${
+                isSubmitting ? "bg-gray-500 cursor-not-allowed" : "bg-accent"
+              } block text-white px-8 py-2 rounded-lg self-center`}
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Saving..." : "Save"}
+          </button>
         </div>
         </form>
       </div>
