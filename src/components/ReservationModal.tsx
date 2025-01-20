@@ -68,7 +68,7 @@ const ReservationModal: React.FC<ReservationModalProps> = ({ isOpen, onClose }) 
                   type="text"      
                   value={name}      
                   onChange={(e) => setName(e.target.value)}      
-                  className="border rounded w-full p-2"      
+                  className="border rounded w-full p-2 text-black"      
                   required      
                 />      
               </div>      
@@ -77,7 +77,7 @@ const ReservationModal: React.FC<ReservationModalProps> = ({ isOpen, onClose }) 
                 <select      
                   value={people}      
                   onChange={(e) => setPeople(e.target.value)}      
-                  className="border rounded w-full p-2"      
+                  className="border rounded w-full p-2 text-black"      
                 >      
                   <option>1 Orang</option>      
                   <option>2 Orang</option>      
@@ -97,7 +97,7 @@ const ReservationModal: React.FC<ReservationModalProps> = ({ isOpen, onClose }) 
                   type="date"      
                   value={date}      
                   onChange={(e) => setDate(e.target.value)}      
-                  className="border rounded w-full p-2"      
+                  className="border rounded w-full p-2 text-black"      
                   required      
                 />      
               </div>      
