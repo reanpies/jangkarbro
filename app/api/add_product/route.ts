@@ -5,12 +5,15 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
+    const { imageUrl, id, title, category, price } = body;
 
     await connectMongoDB();
 
-    const data = await Product.find();
+    const data = await Product.create({
+      imageUrl, id, title, category, price
+    });
 
-    return NextResponse.json(data);
+    return NextResponse.json({msg: "Added successfully", data });
   } catch (error) {
     return NextResponse.json(
       {
