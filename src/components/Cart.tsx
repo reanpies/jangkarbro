@@ -5,6 +5,31 @@ import { X } from 'lucide-react';
 export const Cart: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const { cartItems, getTotal, removeFromCart } = useCart();
 
+  const formatWhatsAppText = () => {
+    const date = new Date().toLocaleString('id-ID', { 
+      dateStyle: 'full', 
+      timeStyle: 'short' 
+    });
+
+    let orderText = `Halo%20Aku%20Ingin%20Memesan%0A%0A`;
+    orderText += `Tanggal: ${date}%0A%0A`;
+    orderText += `Detail%20Pesanan:%0A`;
+    
+    cartItems.forEach((item) => {
+      orderText += `▪️ ${item.name} (${item.quantity}x) = Rp. ${(item.price * item.quantity).toLocaleString()}%0A`;
+    });
+    
+    orderText += `%0A*Total Pembayaran: Rp. ${getTotal().toLocaleString()}*%0A`;
+    
+    return orderText;
+  };
+
+  const handleSubmitOrder = () => {
+    const whatsappText = formatWhatsAppText();
+    window.open(`https://wa.me/6281649789398?text=${whatsappText}`, '_blank');
+    onClose();
+  };
+
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
       <div className="bg-[#003B72] p-5 rounded-lg max-w-md w-full relative">
@@ -57,10 +82,10 @@ export const Cart: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 
             <div className="mt-4">
               <button 
-                onClick={onClose} 
+                onClick={handleSubmitOrder} 
                 className="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-medium px-4 py-2 rounded-md transition-colors"
               >
-                Selesaikan Pesanan
+                Pesan via WhatsApp
               </button>
             </div>
           </>

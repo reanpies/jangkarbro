@@ -91,7 +91,7 @@ export const ProductAddCart: React.FC<ProductAddCartProps> = ({
         <div className="flex items-center justify-center gap-6">  
           <button   
             onClick={() => handleQuantityChange(-1)}  
-            className="w-10 h-10 flex items-center justify-center text-xl bg-gray-100 rounded-full hover:bg-gray-200 transition-colors disabled:opacity-50"  
+            className="w-10 h-10 flex items-center justify-center text-xl bg-gray-100 rounded-full hover:bg-gray-200 transition-colors disabled:opacity-50 text-black"  
             disabled={quantity <= 0}  
           >  
             -  
@@ -101,7 +101,7 @@ export const ProductAddCart: React.FC<ProductAddCartProps> = ({
           </span>  
           <button   
             onClick={() => handleQuantityChange(1)}  
-            className="w-10 h-10 flex items-center justify-center text-xl bg-gray-100 rounded-full hover:bg-gray-200 transition-colors disabled:opacity-50"  
+            className="w-10 h-10 flex items-center justify-center text-xl bg-gray-100 rounded-full hover:bg-gray-200 transition-colors disabled:opacity-50 text-black"  
             disabled={quantity >= maxQuantity}  
           >  
             +  
