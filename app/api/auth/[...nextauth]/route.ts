@@ -14,6 +14,13 @@ export const authOptions: AuthOptions = {
       return session;
     },
   },
+  pages: {
+    signIn: '/admin/dashboard',
+  },
+  redirect: {
+    signIn: '/admin/dashboard',
+    signOut: '/login',
+  },
 };
 
 const handler = NextAuth(authOptions);
