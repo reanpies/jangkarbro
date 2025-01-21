@@ -30,12 +30,14 @@
     "react-responsive": "^10.0.0",
     "react-slick": "^0.30.3",
     "slick-carousel": "^1.8.1",
-    "uploadthing": "^7.4.4"
+    "uploadthing": "^7.4.4",
+    "uuid": "^11.0.5"
   },
   "devDependencies": {
     "@types/node": "22.10.7",
     "@types/react": "19.0.7",
     "@types/react-slick": "^0.23.13",
+    "@types/uuid": "^10.0.0",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.18.0",
     "eslint-config-next": "^15.1.4",
